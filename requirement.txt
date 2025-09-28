@@ -1,7 +1,0 @@
-# VoiceQuery AI required packages
-speechrecognition==3.10.0
-pyaudio==0.2.13
-sqlite3
-numpy==1.26.1
-opencv-python==4.8.1.78
-mediapipe==1.12.0
