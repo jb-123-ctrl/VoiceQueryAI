@@ -2,4 +2,5 @@ speechrecognition==3.11.0
 pyttsx3==2.90
 fuzzywuzzy==0.18.0
 python-Levenshtein==0.21.0
-pyaudio==0.2.13
+sounddevice==0.4.8
+
