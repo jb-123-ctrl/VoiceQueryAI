@@ -1,13 +1,7 @@
-# Standard library; no need to install sqlite3
-# sqlite3
-
+streamlit==1.30.0
 fuzzywuzzy==0.18.0
 python-Levenshtein==0.20.9
 
-
-# pyttsx3 and PyAudio are not supported on cloud; do not include
-# pyttsx3
-# PyAudio
 
 
 
