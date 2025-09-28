@@ -1,6 +1,13 @@
-speechrecognition==3.11.0
-pyttsx3==2.90
+# Standard library; no need to install sqlite3
+# sqlite3
+
 fuzzywuzzy==0.18.0
-python-Levenshtein==0.21.0
-sounddevice==0.4.8
+python-Levenshtein==0.20.9
+
+
+# pyttsx3 and PyAudio are not supported on cloud; do not include
+# pyttsx3
+# PyAudio
+
+
 
