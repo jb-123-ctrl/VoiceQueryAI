@@ -1,12 +1,12 @@
-<<<<<<< HEAD
+
 import sqlite3
 import speech_recognition as sr
 import pyttsx3
 from fuzzywuzzy import fuzz
 
-# -------------------------------
+
 # Create demo database
-# -------------------------------
+
 def create_demo_db():
     conn = sqlite3.connect("demo.db")
     cur = conn.cursor()
@@ -46,9 +46,9 @@ def create_demo_db():
     conn.close()
     print("✅ Demo database created with sample data.")
 
-# -------------------------------
+
 # Run SQL query
-# -------------------------------
+
 def run_query(sql):
     conn = sqlite3.connect("demo.db")
     cur = conn.cursor()
@@ -61,16 +61,16 @@ def run_query(sql):
         conn.close()
         return f"❌ Error: {e}"
 
-# -------------------------------
+
 # Helper: fuzzy check
-# -------------------------------
+
 def fuzzy_contains(query_text, keyword, threshold=80):
     """Check if keyword is fuzzily present in query_text"""
     return fuzz.partial_ratio(query_text, keyword) >= threshold
 
-# -------------------------------
+
 # NLP → SQL mapping with fuzzy match
-# -------------------------------
+
 def nlp_to_sql(query_text: str) -> str:
     query_text = query_text.lower()
 
@@ -107,9 +107,9 @@ def nlp_to_sql(query_text: str) -> str:
     else:
         return None
 
-# -------------------------------
+
 # Voice input
-# -------------------------------
+
 def get_voice_input():
     r = sr.Recognizer()
     with sr.Microphone() as source:
@@ -130,9 +130,9 @@ def get_voice_input():
             print("❌ Speech error:", e)
             return None
 
-# -------------------------------
+
 # TTS setup
-# -------------------------------
+
 engine = pyttsx3.init()
 engine.setProperty("rate", 170)
 engine.setProperty("volume", 1.0)
@@ -157,9 +157,8 @@ def format_and_speak(sql, result):
     else:
         speak("I have fetched the results. Please check your screen for details.")
 
-# -------------------------------
+
 # Main loop
-# -------------------------------
 if __name__ == "__main__":
     create_demo_db()
 
@@ -184,15 +183,15 @@ if __name__ == "__main__":
             speak("I could not understand your query. Please try again.")
 
 
-=======
+
 import sqlite3
 import speech_recognition as sr
 import pyttsx3
 from fuzzywuzzy import fuzz
 
-# -------------------------------
+
 # Create demo database
-# -------------------------------
+
 def create_demo_db():
     conn = sqlite3.connect("demo.db")
     cur = conn.cursor()
@@ -232,9 +231,9 @@ def create_demo_db():
     conn.close()
     print("✅ Demo database created with sample data.")
 
-# -------------------------------
+
 # Run SQL query
-# -------------------------------
+
 def run_query(sql):
     conn = sqlite3.connect("demo.db")
     cur = conn.cursor()
@@ -247,16 +246,16 @@ def run_query(sql):
         conn.close()
         return f"❌ Error: {e}"
 
-# -------------------------------
+
 # Helper: fuzzy check
-# -------------------------------
+
 def fuzzy_contains(query_text, keyword, threshold=80):
     """Check if keyword is fuzzily present in query_text"""
     return fuzz.partial_ratio(query_text, keyword) >= threshold
 
-# -------------------------------
+
 # NLP → SQL mapping with fuzzy match
-# -------------------------------
+
 def nlp_to_sql(query_text: str) -> str:
     query_text = query_text.lower()
 
@@ -293,9 +292,9 @@ def nlp_to_sql(query_text: str) -> str:
     else:
         return None
 
-# -------------------------------
+
 # Voice input
-# -------------------------------
+
 def get_voice_input():
     r = sr.Recognizer()
     with sr.Microphone() as source:
@@ -316,9 +315,9 @@ def get_voice_input():
             print("❌ Speech error:", e)
             return None
 
-# -------------------------------
+
 # TTS setup
-# -------------------------------
+
 engine = pyttsx3.init()
 engine.setProperty("rate", 170)
 engine.setProperty("volume", 1.0)
@@ -343,9 +342,9 @@ def format_and_speak(sql, result):
     else:
         speak("I have fetched the results. Please check your screen for details.")
 
-# -------------------------------
+
 # Main loop
-# -------------------------------
+
 if __name__ == "__main__":
     create_demo_db()
 
@@ -370,4 +369,4 @@ if __name__ == "__main__":
             speak("I could not understand your query. Please try again.")
 
 
->>>>>>> 95b32051e8cc9ae3241b4eee4eab4c4db4f86c1e
+
