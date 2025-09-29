@@ -7,4 +7,4 @@ VoiceQuery AI is an intelligent speech-to-SQL database query system. Speak your 
 - Works with SQLite databases
 - Easy to run and test
 
-## 💻 Folder Structure
+
